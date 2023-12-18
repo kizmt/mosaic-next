@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>{/* suppressHydrationWarning: https://github.com/vercel/next.js/issues/44343 */}
-      <body className={`${inter.variable} font-inter antialiased bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400`}>
+      <body className={`${inter.variable} font-inter antialiased bg-slate-100 dark:bg-background-100 text-slate-600 dark:text-slate-400`}>
         <Theme>
           <AppProvider>
             {children}

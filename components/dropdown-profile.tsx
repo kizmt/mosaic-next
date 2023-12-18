@@ -4,13 +4,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, Transition } from '@headlessui/react'
 import UserAvatar from '@/public/images/user-avatar-32.png'
+import Button from './Button'
 
 export default function DropdownProfile({ align }: {
   align?: 'left' | 'right'
 }) {
   return (
     <Menu as="div" className="relative inline-flex">
-      <Menu.Button className="inline-flex justify-center items-center group">
+      <Button className="inline-flex justify-center items-center group">
         <Image className="w-8 h-8 rounded-full" src={UserAvatar} width={32} height={32} alt="User" />
         <div className="flex items-center truncate">
           <span className="truncate ml-2 text-sm font-medium dark:text-slate-300 group-hover:text-slate-800 dark:group-hover:text-slate-200">Acme Inc.</span>
@@ -18,7 +19,7 @@ export default function DropdownProfile({ align }: {
             <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
           </svg>
         </div>
-      </Menu.Button>
+      </Button>
       <Transition
         className={`origin-top-right z-10 absolute top-full min-w-[11rem] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 py-1.5 rounded shadow-lg overflow-hidden mt-1 ${align === 'right' ? 'right-0' : 'left-0'
           }`}
